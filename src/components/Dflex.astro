@@ -2,18 +2,15 @@
 import '../styles/dflex.css';
 import Button from "../components/Button.astro";
 import FlexibleHeading from '../components/Flexibleheading.astro';
-
-
 ---
-
 <section class="dflex-sec ">
   <div class="flex-1">
         <FlexibleHeading
           title="Reduce Environmental Impact through Smarter Water Reuse and Recycling"
           topText="Who We Are"
           topIcon="/home/logo-head.svg"
-          align="left"
-          maxWidthClass="max-w-[50rem]" 
+          align="left-align-txt"
+          maxWidthClass="max-w-80" 
         />
     </div>
     <div class="particles-wrap">
@@ -26,7 +23,7 @@ import FlexibleHeading from '../components/Flexibleheading.astro';
     </div>
     <div class="dflex-area" >
         <div class="container">
-            <div class="dflex-wrapper">
+            <div class="dflex-wrapper flex justify-between items-start flex-wrap gap-4 md:items-center md:flex-nowrap lg:items-end">
                 <div class="left-image-blk" >
                     <img src="/home/flex1.png" alt="Who We Are" title="Who We Are" width="695" height="524" />
                 </div>
