@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import './variables.css';
+@import './header.css';
+@import './herobanner.css';
+@import './dflex.css';
+@import "tailwindcss";
+
+
+@theme {
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Urbanist", sans-serif;
+}
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@layer base {
+   html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+  }
+  body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+      color: var(--primary-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+  }
+ 
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+  }
+  h3 {
+    @apply font-bold;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+  h4 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  h5 {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+  h6 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+  p {
+    @apply font-normal;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+}
+
+@layer components {
+  .white-border-btn {
+    @apply inline-flex items-center justify-center 
+           px-[1.7rem] py-[0.8rem] 
+           min-w-[15.8rem] min-h-[4.5rem] 
+           rounded-[2.2rem] 
+           border bg-transparent 
+           text-[1.6rem] font-normal 
+           leading-none no-underline 
+           transition-all duration-300 ease-in-out 
+           cursor-pointer relative;
+
+    font-family: var(--font-secondary);
+    color: var(--theme-white);
+    border-color: var(--theme-white);
+  }
+
+  .white-border-btn:hover,
+  .white-border-btn:focus {
+    color: var(--theme-orange);
+    border-color: var(--theme-orange);
+    background-color: transparent;
+  }
+
+  .white-border-btn.with-arrow {
+    @apply pl-[1.6rem] pr-[4.1rem] justify-between;
+  }
+
+  .white-border-btn.with-arrow .arrowblk {
+    @apply w-[1.2rem] h-[1.2rem] 
+           absolute right-[2rem] top-1/2 
+           -translate-y-1/2 
+           bg-no-repeat bg-center bg-contain;
+    background-image: url('/home/arrow-white.svg');
+  }
+
+  .white-border-btn.with-arrow:hover .arrowblk {
+    background-image: url('/home/arrow-orange.svg');
+  }
+  .primary-ct-btn,
+  .wp-block-button__link.wp-element-button {
+    @apply inline-flex items-center justify-center 
+           px-[1.4rem] py-[0.8rem] 
+           min-w-[17.4rem] min-h-[5.3rem] 
+           rounded-[3rem] 
+          text-[1.6rem] font-normal 
+           text-center no-underline 
+           border border-transparent 
+           transition-all duration-300 ease-in-out 
+           cursor-pointer relative;
+
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    line-height: 100%;
+    color: var(--theme-white);
+    background-color: var(--theme-orange);
+  }
+
+  .primary-ct-btn:hover,
+  .wp-block-button__link.wp-element-button:hover {
+    color: var(--theme-orange);
+    background-color: transparent;
+    border-color: var(--theme-orange);
+    text-decoration: none;
+  }
+
+  .primary-ct-btn:focus,
+  .wp-block-button__link.wp-element-button:focus {
+    color: var(--theme-white);
+    background-color: var(--theme-orange);
+    border-color: transparent;
+    outline: none;
+  }
+
+  .primary-ct-btn:hover:focus,
+  .wp-block-button__link.wp-element-button:hover:focus {
+    color: var(--theme-orange);
+    background-color: transparent;
+    border-color: var(--theme-orange);
+  }
+  .hdr-ct-btn {
+    @apply inline-flex items-center justify-center 
+           px-[1.4rem] py-[0.8rem]
+           min-w-[13.3rem] min-h-[4.6rem]
+           rounded-[3rem] 
+           font-semibold leading-none
+           text-[1.6rem] no-underline text-center 
+           transition-all duration-300 ease-in-out 
+           border border-transparent 
+           cursor-pointer relative;
+
+    font-family: var(--font-secondary);
+    color: var(--theme-white);
+    background-color: var(--theme-orange);
+  }
+
+  .hdr-ct-btn:hover,
+  .hdr-ct-btn:focus {
+    color: var(--theme-orange);
+    background-color: transparent;
+    border-color: var(--theme-orange);
+  }
+
+  .hdr-ct-btn:focus {
+    outline: none;
+  }
+
+  @media (min-width: 480px) {
+    .hdr-ct-btn {
+      @apply px-[2rem] py-[1.4rem];
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hdr-ct-btn{
+      @apply px-[2rem] py-[1.4rem];
+    }
+  }
+  .blue-border-btn {
+    @apply inline-flex items-center justify-center 
+           px-[1.7rem] py-[0.8rem] 
+           min-w-[12.1rem] min-h-[4.4rem] 
+           rounded-[2.2rem] 
+           border bg-transparent 
+           text-[1.6rem] leading-none 
+           no-underline transition-all duration-300 ease-in-out 
+           cursor-pointer relative;
+
+    font-family: var(--secondary-font);
+    color: var(--theme-blue-80);
+    border-color: var(--theme-blue-40);
+  }
+
+  .blue-border-btn:focus {
+    color: var(--theme-blue-80);
+    border-color: var(--theme-blue-40);
+    background-color: transparent;
+    outline: none;
+  }
+
+  .blue-border-btn:hover,
+  .blue-border-btn:hover:focus {
+    color: var(--theme-orange);
+    border-color: var(--theme-orange);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .blue-border-btn.with-arrow {
+    @apply pl-[1.6rem] pr-[4.1rem] justify-between;
+  }
+
+  .blue-border-btn.with-arrow .arrowblk {
+    @apply w-[1.2rem] h-[1.2rem] absolute right-[2rem] top-1/2 -translate-y-1/2 bg-no-repeat bg-center bg-contain;
+    background-image: url('/home/arrow-blue.svg');
+  }
+
+  .blue-border-btn.with-arrow:hover .arrowblk {
+    background-image: url('/home/arrow-orange1.svg');
+  }
+
+  /* Responsive Padding Overrides */
+  @media (min-width: 480px) {
+    .primary-ct-btn,
+    .wp-block-button__link.wp-element-button {
+      padding: 1.4rem 2rem;
+    }
+     .blue-border-btn {
+      padding: 0.8rem 1.7rem; /* You can adjust for desktop */
+    }
+  }
+}
+@media (min-width: 480px) {
+    .container {
+      max-width: 100%;
+      padding: 0 2rem;
+    }
+}
+@media (min-width: 580px) and (max-width: 767px) {
+  @layer base {
+    h1 { font-size: 3.8rem; }
+    h2 { font-size: 2.8rem; }
+    h3 { font-size: 2.6rem; }
+    h4 { font-size: 2.2rem; }
+    h5 { font-size: 1.9rem; }
+    h6 { font-size: 1.8rem; }
+    p  { font-size: 1.6rem; }
+  }
+   .container {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  @layer base {
+    h1 { font-size: 4rem;   line-height: 1; }
+    h2 { font-size: 3.2rem; line-height: 1.1; }
+    h3 { font-size: 2.8rem; line-height: 1.1; }
+    h4 { font-size: 2.4rem; line-height: 1.2; }
+    h5 { font-size: 2.1rem; line-height: 1.2; }
+    h6 { font-size: 1.9rem; line-height: 1;   }
+    p  { font-size: 1.6rem; }
+  }
+  .container {
+    max-width: 144rem;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+ 
+  @layer base {
+    h1 { font-size: 6rem;   line-height: 1; }
+    h2 { font-size: 4rem;   line-height: 1.1; }
+    h3 { font-size: 3.2rem; line-height: 1.1; }
+    h4 { font-size: 2.8rem; line-height: 1.2; }
+    h5 { font-size: 2.2rem; line-height: 1.1; }
+    h6 { font-size: 2rem;   line-height: 1.1; }
+    p  { font-size: 1.6rem; }
+  }
+  .container {
+    max-width: 144rem;
+    padding: 0 2rem;
+  }
+}

@@ -1,0 +1,43 @@
+  ---
+// Props
+interface Props {
+  title: string;
+  topText?: string;
+  topIcon?: string;
+  align?: 'center' | 'left';
+  maxWidthClass?: string;
+}
+
+const {
+  title,
+  topText = '',
+  topIcon = '',
+  align = 'center',
+  maxWidthClass = 'max-w-[80rem]',
+} = Astro.props as Props;
+
+const alignmentClass = align === 'center' ? 'text-center mx-auto' : 'text-left';
+---
+<div class="heading-block py-8">
+  <div class="container">
+    <div class={`heading-inner ${alignmentClass} ${maxWidthClass}`}>
+      {topText && (
+        <div class="top-head flex items-center gap-2 mb-4">
+          {topIcon && (
+            <img
+              src={topIcon}
+              alt={topText}
+              width="20"
+              height="20"
+              class="heading-logo"
+            />
+          )}
+          <div class="top-txt text-sm text-gray-600 uppercase">{topText}</div>
+        </div>
+      )}
+      <h2 class="text-[2.4rem] leading-tight md:text-[3.2rem] font-semibold text-primary">
+        {title}
+      </h2>
+    </div>
+  </div>
+</div>

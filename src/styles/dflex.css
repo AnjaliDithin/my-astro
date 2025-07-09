@@ -1,0 +1,193 @@
+.dflex-sec {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .dflex-sec {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec {
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+  }
+}
+.dflex-sec .dflex-area .dflex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .dflex-area .dflex-wrapper {
+    gap: 5rem;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .dflex-sec .dflex-area .dflex-wrapper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+.dflex-sec .dflex-area .left-image-blk {
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+  min-height: 12rem;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .dflex-area .left-image-blk {
+    width: calc(50% - 2.5rem);
+    border-radius: 3rem;
+    min-height: 30rem;
+  }
+}
+.dflex-sec .dflex-area .left-image-blk img {
+  border-radius: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.7s ease all;
+  transition: 0.7s ease all;
+  width: 100%;
+}
+.dflex-sec .dflex-area .left-image-blk img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.7s ease all;
+  transition: 0.7s ease all;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .dflex-area .left-image-blk img {
+    border-radius: 3rem;
+  }
+}
+.dflex-sec .dflex-area .right-content-blk {
+  width: 100%;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .dflex-area .right-content-blk {
+    width: calc(50% - 2.5rem);
+    padding-bottom: 2rem;
+    padding-right: 5rem;
+  }
+}
+.dflex-sec .dflex-area .txtwrapper p {
+  margin-bottom: 1rem;
+}
+.dflex-sec .dflex-area .txtwrapper p:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .dflex-area .txtwrapper p {
+    margin-bottom: 1.6rem;
+  }
+}
+.dflex-sec .dflex-area .link-wrap {
+  margin-top: 3rem;
+}
+.dflex-sec .particles-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .particles-wrap {
+    top: 10%;
+  }
+}
+.dflex-sec .particles-wrap .particles {
+  width: 25%;
+  height: 100%;
+}
+.dflex-sec .particles-wrap .particles img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.dflex-sec .particles-wrap .desktop-particles {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .particles-wrap .desktop-particles {
+    display: block;
+  }
+}
+.dflex-sec .particles-wrap .mobile-particles {
+  display: block;
+  width: 40%;
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec .particles-wrap .mobile-particles {
+    display: none;
+  }
+}
+.dflex-sec.flex-reverse .dflex-area .dflex-wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.dflex-sec.dflex-subtext-sec {
+  padding-top: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .dflex-sec.dflex-subtext-sec {
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dflex-sec.dflex-subtext-sec {
+    padding-top: 12rem;
+  }
+}
+.dflex-sec.dflex-subtext-sec .center-hdg2-blk {
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 1080px) {
+  .dflex-sec.dflex-subtext-sec .center-hdg2-blk {
+    padding-bottom: 4rem;
+  }
+}
+.dflex-sec.dflex-subtext-sec .dflex-area .dflex-wrapper {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.dflex-sec.dflex-subtext-sec .dflex-area .right-content-blk {
+  padding-bottom: 0;
+}
+.dflex-sec.dflex-subtext-sec .dflex-area .txtwrapper {
+  margin-bottom: 2.4rem;
+}
+.dflex-sec.dflex-subtext-sec .dflex-area .txtwrapper:last-child {
+  margin-bottom: 1rem;
+}
+.dflex-sec.dflex-subtext-sec .dflex-area .txtwrapper h5 {
+  margin-bottom: 0.5rem;
+}

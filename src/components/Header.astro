@@ -1,0 +1,52 @@
+---
+import '../styles/header.css';
+import Button from "../components/Button.astro";
+
+const navLinks = [
+  { name: "Who We Are", href: "/WhoWeAre" },
+  { name: "What We Do", href: "/WhatWeDo" },
+  { name: "Industries", href: "/Industries" },
+];
+---
+<header class="site-header" role="banner">
+	<div class="site-header-wrapper">
+		<div class="container">
+			<div class="site-main-wrapper justify-between">
+				<div class="hdr-logo">
+					<a href=""><img  class="hdr-logo-img" src="/hdr-logo.svg" alt="logo of Alba waters" title="Alba waters" width="160" height="55"/></a>
+				</div>
+				<nav class="hdr-nav">
+                   <ul class="flex gap-6 items-center">
+                        {navLinks.map(link => (
+                        <li><a href={link.href}>{link.name}</a></li>
+                        ))}
+                        <li>
+                            <Button 
+                            href="#" 
+                            text="Contact Us" 
+                            variant="Hdr-ct-btn" 
+                            withArrow={true} 
+                            target="_blank" 
+                        />
+                        </li>
+                    </ul>
+				</nav>
+				
+			</div>
+			<div class="siteTop-Mobile-wrapper">
+				<div class="siteTop-mobile-header flex justify-between items-center">
+					<div class="hdr-logo">
+						<a href=""><img  class="hdr-logo" src="/mobhdr-logo.svg" alt="logo of Alba waters" title="Alba waters" width="94" height="32"/></a>
+					</div>
+					<div class="hamburger-menu mobile-menu" id="hamburger-menu">
+						<img class ="open-menu" src="/mobilemenu.svg" alt="mobilemenu" title="mobilemenu" width="30" height="30"  />
+						<img class ="close-menu" src="/close.png" alt="closemenu" title="closemenu" width="30" height="30"  />
+					</div>
+					<div class="Mobile-navbar">
+						
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>	
+</header>

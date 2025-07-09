@@ -1,0 +1,17 @@
+:root {
+  /* Colors */
+  --primary-color: rgba(74, 74, 74, 0.8);
+  --secondary-color: #4A4A4A;
+  --theme-orange: #FF7A00;
+  --theme-white: #ffffff;
+  --theme-black: #000000;
+  --theme-blue: #0F8BF4;
+  --theme-blue-80: rgba(15, 139, 244, 0.8);
+  --theme-blue-40: rgba(15, 139, 244, 0.4);
+  --theme-border: rgba(15, 139, 244, 0.1);
+  --theme-light-grey: #F3F9FF;
+  --theme-dark-grey: #333333;
+  --theme-green: #76C346;
+  --theme-red: #DB3030;
+  --theme-yellow: #E6EB5D;
+}

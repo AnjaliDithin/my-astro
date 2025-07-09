@@ -1,0 +1,38 @@
+---
+type Variant = 'primary' | 'Hdr-ct-btn' | 'white-border' | 'blue-border';
+
+interface Props {
+  href?: string;
+  text?: string;
+  variant?: Variant;
+  withArrow?: boolean;
+  target?: '_blank' | '_self' | '_parent' | '_top';
+}
+
+// ✅ Tell Astro this is the expected prop shape
+const {
+  href = "#",
+  text = "Click Me",
+  variant = "primary",
+  withArrow = false,
+  target = "_self",
+} = Astro.props as Props;
+
+// ✅ Strongly typed map
+const variantClassMap: Record<Variant, string> = {
+  primary: "primary-ct-btn",
+  "Hdr-ct-btn": "hdr-ct-btn",
+  "white-border": "white-border-btn",
+  "blue-border": "blue-border-btn",
+};
+
+// ✅ No more error here!
+const buttonClasses = `${variantClassMap[variant]} ${withArrow ? 'with-arrow' : ''}`;
+---
+
+<div class="btn-wrap">
+  <a href={href} class={buttonClasses} target={target}>
+    {text}
+    {withArrow && <span class="arrowblk"></span>}
+  </a>
+</div>
