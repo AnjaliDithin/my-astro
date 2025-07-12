@@ -20,6 +20,8 @@
 .site-header .hdr-logo a img {
   -o-object-fit: contain;
      object-fit: contain;
+         max-height: 5rem;
+    max-width: 5rem;
 }
 .site-header .hdr-nav {
   display: none;
